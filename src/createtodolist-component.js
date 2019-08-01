@@ -30,6 +30,7 @@ class Createtodolist extends React.Component {
     b.description = this.state.description;
     a.push(b);
     localStorage.setItem("items", JSON.stringify(a));
+    this.props.setList([...this.props.list, b]);
     this.setState({
       name: "",
       description: ""

@@ -6,7 +6,7 @@ class Todos extends React.Component {
   render() {
     return (
       <ul className="list1">
-        {a.map(data => (
+        {this.props.list.map(data => (
           <li>
             <b>{data.name}</b>:-{data.description}
           </li>
