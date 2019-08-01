@@ -1,4 +1,7 @@
 import React from "react";
+let a = localStorage.getItem("items")
+  ? JSON.parse(localStorage.getItem("items"))
+  : [];
 
 class Createtodolist extends React.Component {
   state = {
@@ -18,6 +21,14 @@ class Createtodolist extends React.Component {
   };
   onSubmit = e => {
     e.preventDefault;
+    let b = {
+      name: "",
+      description: ""
+    };
+    b.name = this.state.name;
+    b.description = this.state.description;
+    a.push(b);
+    localStorage.setItem("items", JSON.stringify(a));
     this.setState({
       name: "",
       description: ""

@@ -9,9 +9,13 @@ class App extends React.Component {
       <Router>
         <div className="container">
           <h1>TODO APPLICATION</h1>
-          {/* <Link to="/">Todo List</Link> */}
-          <Link to="/create">Create ToDo List</Link>
-          {/* <Route path="/" exact component={Todos} /> */}
+          <Link className="link" to="/">
+            Todo List
+          </Link>
+          <Link className="link" to="/create">
+            Create ToDo List
+          </Link>
+          <Route path="/" exact component={Todos} />
           <Route path="/create" component={Createtodolist} />
         </div>
       </Router>
