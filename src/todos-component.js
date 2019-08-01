@@ -8,7 +8,10 @@ class Todos extends React.Component {
       <ul className="list1">
         {this.props.list.map(data => (
           <li>
-            <b>{data.name}</b>:-{data.description}
+            <i>
+              <b>{data.name}</b>
+            </i>
+            --> {data.description}
           </li>
         ))}
       </ul>

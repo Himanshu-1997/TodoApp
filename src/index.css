@@ -84,3 +84,6 @@ tr:nth-child(even) {
   align-items: left;
   flex-wrap: nowrap; 
 }
+lable textarea{
+  vertical-align: middle;
+}

@@ -26,7 +26,7 @@ class Createtodolist extends React.Component {
       name: "",
       description: ""
     };
-    b.name = this.state.name;
+    b.name = this.state.name.toUpperCase();
     b.description = this.state.description;
     a.push(b);
     localStorage.setItem("items", JSON.stringify(a));
@@ -45,8 +45,10 @@ class Createtodolist extends React.Component {
             <label>
               <b>Enter Title:-</b>
             </label>
-            <input
-              type="text"
+            <textarea
+              // type="text"
+              rows="2"
+              cols="47"
               value={this.state.name}
               onChange={this.handleChangeName}
             />
@@ -57,7 +59,7 @@ class Createtodolist extends React.Component {
             </label>
             <textarea
               value={this.state.description}
-              rows="4"
+              rows="5"
               cols="40"
               onChange={this.handleChangeDescription}
             />
