@@ -1,10 +1,18 @@
 import React from "react";
-// import { a } from "./createtodolist-component";
-
+let a = localStorage.getItem("items")
+  ? JSON.parse(localStorage.getItem("items"))
+  : [];
 class Todos extends React.Component {
   render() {
-    // console.log(a);
-    return <h1>hello world</h1>;
+    return (
+      <ul className="list1">
+        {a.map(data => (
+          <li>
+            <b>{data.name}</b>:-{data.description}
+          </li>
+        ))}
+      </ul>
+    );
   }
 }
 export default Todos;

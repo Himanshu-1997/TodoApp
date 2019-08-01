@@ -6,19 +6,21 @@ import Createtodolist from "./createtodolist-component";
 class App extends React.Component {
   render() {
     return (
-      <Router>
-        <div className="container">
-          <h1>TODO APPLICATION</h1>
-          <Link className="link" to="/">
-            Todo List
-          </Link>
-          <Link className="link" to="/create">
-            Create ToDo List
-          </Link>
-          <Route path="/" exact component={Todos} />
-          <Route path="/create" component={Createtodolist} />
+      <div className="container">
+        <div className="header">
+          <h1>
+            <u>TODO APPLICATION</u>
+          </h1>
         </div>
-      </Router>
+        <div className="bodypart">
+          <h1>CREATE TODO LIST</h1>
+          <h1>LIST OF TODO ITEMS</h1>
+        </div>
+        <div className="bodypart2">
+          <Createtodolist />
+          <Todos />
+        </div>
+      </div>
     );
   }
 }
