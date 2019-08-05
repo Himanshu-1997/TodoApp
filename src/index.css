@@ -84,6 +84,13 @@ tr:nth-child(even) {
   align-items: left;
   flex-wrap: nowrap; 
 }
+.list1:hover .hideButton{
+  display: inline-block;
+}
 lable textarea{
   vertical-align: middle;
+}
+
+.hideButton{
+  display:none;
 }
