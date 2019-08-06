@@ -95,8 +95,10 @@ lable textarea{
   display:none;
 }
 
-/* .hideButton:first-child */
+/* .lis:hover .editForm{
+  display: block;
+}
 
-/* .onEdit{
+.editForm{
   display: none;
 } */

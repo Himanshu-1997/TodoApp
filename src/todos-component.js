@@ -7,7 +7,8 @@ class Todos extends React.Component {
     name: "",
     description: "",
     list: [],
-    flag: false
+    flag: false,
+    id: -1
   };
   componentWillReceiveProps(nextProps) {
     this.setState({
@@ -21,11 +22,6 @@ class Todos extends React.Component {
       list: this.state.list
     });
   };
-  // handleClickonEdit = () => {
-  //   this.setState({
-  //     flag: true
-  //   });
-  // };
 
   //edit Option
 
@@ -50,17 +46,21 @@ class Todos extends React.Component {
       name: "",
       description: "",
       list: b,
-      flag: false
+      flag: false,
+      id: -1
     });
   };
 
-  showEditForm = () => {
+  showEditForm = index => {
+    console.log(index);
     this.setState({
-      flag: true
+      flag: true,
+      id: index
     });
   };
 
   render() {
+    // const {state:{name, description},props:{list}} = this;
     return (
       <ul className="list1">
         {this.props.list.map((data, index) => (
@@ -70,7 +70,7 @@ class Todos extends React.Component {
             <div className="hideButton">
               <input
                 type="button"
-                onClick={() => this.showEditForm()}
+                onClick={e => this.showEditForm(index)}
                 value="Edit"
               />
               <input
@@ -79,8 +79,8 @@ class Todos extends React.Component {
                 onClick={e => this.handleClickonDelete(index)}
               />
             </div>
-            {this.state.flag && (
-              <div>
+            {this.state.flag && this.state.id == index && (
+              <div className="editForm">
                 <form onSubmit={e => this.onSubmit(e, index)}>
                   <input
                     type="text"
