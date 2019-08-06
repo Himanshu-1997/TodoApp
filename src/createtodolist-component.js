@@ -46,7 +46,6 @@ class Createtodolist extends React.Component {
               <b>Enter Title:-</b>
             </label>
             <textarea
-              // type="text"
               rows="2"
               cols="47"
               value={this.state.name}

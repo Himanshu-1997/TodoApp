@@ -84,7 +84,7 @@ tr:nth-child(even) {
   align-items: left;
   flex-wrap: nowrap; 
 }
-.list1:hover .hideButton{
+.lis:hover .hideButton{
   display: inline-block;
 }
 lable textarea{
@@ -94,3 +94,9 @@ lable textarea{
 .hideButton{
   display:none;
 }
+
+/* .hideButton:first-child */
+
+/* .onEdit{
+  display: none;
+} */
